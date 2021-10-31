@@ -7,7 +7,7 @@ import random
 import time
 
 # 유튜브 API V_3 의 api 키 받아서 입력
-pafy.set_api_key('')
+pafy.set_api_key('AIzaSyCYq4WSuf4jjYyV6nxHVpBfASzfQeA6niw')
 
 # 유튜브 라이브 주소를 입력해 주세요.
 # 예를 들어, 다음과 같은 주소가 있을 때에
@@ -25,8 +25,8 @@ title = v.title
 author = v.author
 published = v.published
 
-empty_frame = pd.DataFrame(columns=['제목', '채널 명', '스트리밍 시작 시간', '댓글 작성자', '댓글 내용', '댓글 작성 시간'])
-empty_frame.to_csv('./youtube.csv', encoding="UTF-8")
+#empty_frame = pd.DataFrame(columns=['제목', '채널 명', '스트리밍 시작 시간', '댓글 작성자', '댓글 내용', '댓글 작성 시간'])
+#empty_frame.to_csv('./youtube.csv', encoding="UTF-8")
 
 chat = pytchat.create(video_id)           # topchat_only='FALSE'
 
@@ -39,7 +39,7 @@ while chat.is_alive():
         data = chat.get()
         items = data.items
         for c in items:
-            if c.author.name == "[오제이 튜브]OJ Tube":
+            if c.author.name == "JH Choi":
                 if c.message == "끝!" :
                     start_flag = False
                 elif c.message == "시작!" :
