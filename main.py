@@ -49,6 +49,8 @@ while chat.is_alive():
                     cast_lot = True
 
             if start_flag:
+                if c.message.find("도전") == -1:
+                    continue
                 id_list.add(c.author.name)
 
             print(f"{c.datetime} [{c.author.name}] - {c.message}")
