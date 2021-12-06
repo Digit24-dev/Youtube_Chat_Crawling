@@ -7,7 +7,7 @@ import random
 import time
 
 # 유튜브 API V_3 의 api 키 받아서 입력
-pafy.set_api_key('AIzaSyCYq4WSuf4jjYyV6nxHVpBfASzfQeA6niw')
+pafy.set_api_key('')
 
 # 유튜브 라이브 주소를 입력해 주세요.
 # 예를 들어, 다음과 같은 주소가 있을 때에
